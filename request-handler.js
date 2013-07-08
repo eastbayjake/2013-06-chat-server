@@ -3,7 +3,34 @@
  * basic-server.js.  So you must figure out how to export the function
  * from this file and include it in basic-server.js. Check out the
  * node module documentation at http://nodejs.org/api/modules.html. */
+var defaultCorsHeaders = require("./basic-server.js").headers;
 
 var handleRequest = function(request, response) {
+  console.log("Serving request type " + request.method + " for url " + request.url);
+  //if request.url === something, response.end (something)
+  var statusCode = 200;
+  var headers = defaultCorsHeaders;
+  headers['Content-Type'] = "text/plain";
+  response.writeHead(statusCode, headers);
+  if (request.url === "/1/classes/messages") {
+    var messages = {username: "default", message: "AIN'T NOTHIN' HERE"};
+    messages = JSON.stringify(messages);
+    response.end(messages);
+  }
+  };
 
-};
+
+exports.handler = handleRequest;
+
+
+
+// if (request.url === "/1/classes/messages") {
+//     var hi = [];
+//     var message = {username: "tuhin", text:"hi!"};
+//     var newMessage = JSON.stringify(message);
+//     hi.push(message);
+//     var results = new Buffer(hi);
+//     console.log(hi);
+//     response.write(results);
+//     response.end();
+//   } else {
