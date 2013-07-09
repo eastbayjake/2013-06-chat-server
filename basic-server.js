@@ -1,13 +1,7 @@
 /* Import node's http module: */
 var http = require("http");
+var requestHandler = require("./request-handler.js");
 
-var defaultCorsHeaders = {
-  "access-control-allow-origin": "*",
-  "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
-  "access-control-allow-headers": "Origin, Content-Type, Accept",
-  "access-control-max-age": 10 // Seconds.
-};
-exports.headers = defaultCorsHeaders;
 /* Every server needs to listen on a port with a unique number. The
  * standard port for HTTP servers is port 80, but that port is
  * normally already claimed by another server and/or not accessible to
@@ -22,7 +16,6 @@ var ip = "127.0.0.1";
 
 /* Use node's http module to create a server and start it listening on
  * the given port and IP. */
-var requestHandler = require("./request-handler.js");
 
 var server = http.createServer(requestHandler.handleRequest);
 console.log("Listening on http://" + ip + ":" + port);

@@ -3,33 +3,64 @@
  * basic-server.js.  So you must figure out how to export the function
  * from this file and include it in basic-server.js. Check out the
  * node module documentation at http://nodejs.org/api/modules.html. */
-var defaultCorsHeaders = require("./basic-server.js").headers;
+var fs = require('fs');
+
 var messages = {
-  '/classes/room1': []
+  '/classes/room1': [],
+  '/room1/': []
 };
+
+var defaultCorsHeaders = {
+  "access-control-allow-origin": "*",
+  "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+  "access-control-allow-headers": "Origin, Content-Type, Accept",
+  "access-control-max-age": 10 // Seconds.
+};
+
 var handleRequest = function(request, response) {
   console.log("Serving request type " + request.method + " for url " + request.url);
-  //if request.url === something, response.end (something)
   var statusCode = 200;
   var headers = defaultCorsHeaders;
-  headers['Content-Type'] = "text/plain";
+  headers['Content-Type'] = "text/html";
   response.writeHead(statusCode, headers);
-  request.url = parseURL(request.url);
+  console.log(request.url);
+  var shortURL = parseURL(request.url);
+  console.log(request.url);
+  var html, client, reset, styles;
+  if (request.url === '/') {
+    html = fs.readFileSync('./client/index.html');
+      response.write(html);
+      response.end();
+  }
+  if (request.url === '/client.js') {
+    client = fs.readFileSync('./client/client.js');
+      response.write(client);
+      response.end();
+  }
+  if (request.url === '/css/reset.css') {
+    reset = fs.readFileSync('./client/css/reset.css');
+      response.write(reset);
+      response.end();
+  }
+  if (request.url === '/css/styles.css') {
+    styles = fs.readFileSync('./client/css/styles.css');
+      response.write(styles);
+      response.end();
+  }
   if (request.method === "GET"){
-    console.log(request.url);
-    if (messages[request.url]){
+    if (messages[shortURL]){
       response.writeHead(200, headers);
-      response.end(JSON.stringify(messages[request.url]));
+      response.end(JSON.stringify(messages[shortURL]));
     } else {
       response.writeHead(404, headers);
       response.end("FILE NOT FOUND");
     }
   } else if (request.method === "POST"){
-    if (!messages[request.url]) {
-      messages[request.url] = [];
+    if (!messages[shortURL]) {
+      messages[shortURL] = [];
     }
     request.addListener("data", function(data) {
-      messages[request.url].push(JSON.parse(data));
+      messages[shortURL].push(JSON.parse(data));
     });
     response.writeHead(201, headers);
     response.end("Success");
