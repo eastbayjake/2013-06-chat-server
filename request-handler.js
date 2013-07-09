@@ -4,7 +4,9 @@
  * from this file and include it in basic-server.js. Check out the
  * node module documentation at http://nodejs.org/api/modules.html. */
 var defaultCorsHeaders = require("./basic-server.js").headers;
-var messages = [];
+var messages = {
+  '/classes/room1': []
+};
 var handleRequest = function(request, response) {
   console.log("Serving request type " + request.method + " for url " + request.url);
   //if request.url === something, response.end (something)
@@ -12,44 +14,33 @@ var handleRequest = function(request, response) {
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/plain";
   response.writeHead(statusCode, headers);
-  if (request.url === "/classes/room1") {
-    //we need to figure out how to wildcard the url
-    //slash figure out the logic such that requests go to the right place
-    if (request.method === "GET") {
-      var outgoing_message = JSON.stringify(messages);
+  request.url = parseURL(request.url);
+  if (request.method === "GET"){
+    console.log(request.url);
+    if (messages[request.url]){
       response.writeHead(200, headers);
-      response.end(outgoing_message);
-    } else if (request.method === "POST") {
-      console.log('request body ', request);
-      request.addListener("data", function(data) {
-        messages.push(JSON.parse(data));
-        console.log(data);
-      });
-      response.writeHead(201, headers);
-      response.end("Success");
+      response.end(JSON.stringify(messages[request.url]));
     } else {
-      response.writeHead(406, headers);
-      response.end("Please submit only GET or POST requests");
+      response.writeHead(404, headers);
+      response.end("FILE NOT FOUND");
     }
+  } else if (request.method === "POST"){
+    if (!messages[request.url]) {
+      messages[request.url] = [];
+    }
+    request.addListener("data", function(data) {
+      messages[request.url].push(JSON.parse(data));
+    });
+    response.writeHead(201, headers);
+    response.end("Success");
   } else {
-    response.writeHead(404, headers);
-    response.end("There was an error");
+    response.writeHead(406, headers);
+    response.end("Please submit only GET or POST requests");
   }
-  };
+};
 
+var parseURL = function(url) {
+  return url.substr(21,url.length);
+};
 
-exports.handler = handleRequest;
-
-
-
-
-// if (request.url === "/1/classes/messages") {
-//     var hi = [];
-//     var message = {username: "tuhin", text:"hi!"};
-//     var newMessage = JSON.stringify(message);
-//     hi.push(message);
-//     var results = new Buffer(hi);
-//     console.log(hi);
-//     response.write(results);
-//     response.end();
-//   } else {
+exports.handleRequest = handleRequest;

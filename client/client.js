@@ -1,5 +1,4 @@
 function display (username, userchat) {
-  $('ul').empty();
   $table = $('<li><table></table></li>');
   $row = $('<tr></tr>');
   $user = $('<a href="#" class="user">' + username + '</a>');
@@ -18,6 +17,7 @@ function fetch () {
     data: {},
     success: function(data) {
       data = JSON.parse(data);
+      $('ul').empty();
       for (var i = 0; i < data.length; i++) {
         display(data[i].username, data[i].message);
       }
