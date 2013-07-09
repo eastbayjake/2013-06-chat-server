@@ -4,7 +4,7 @@ var http = require("http");
 var defaultCorsHeaders = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
-  "access-control-allow-headers": "content-type, accept",
+  "access-control-allow-headers": "Origin, Content-Type, Accept",
   "access-control-max-age": 10 // Seconds.
 };
 exports.headers = defaultCorsHeaders;

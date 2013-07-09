@@ -4,7 +4,7 @@
  * from this file and include it in basic-server.js. Check out the
  * node module documentation at http://nodejs.org/api/modules.html. */
 var defaultCorsHeaders = require("./basic-server.js").headers;
-var messages = {username: "default", message: "AIN'T NOTHIN' HERE"};
+var messages = [];
 var handleRequest = function(request, response) {
   console.log("Serving request type " + request.method + " for url " + request.url);
   //if request.url === something, response.end (something)
@@ -13,13 +13,30 @@ var handleRequest = function(request, response) {
   headers['Content-Type'] = "text/plain";
   response.writeHead(statusCode, headers);
   if (request.url === "/1/classes/messages") {
-    var outgoing_message = JSON.stringify(messages);
-    response.end(outgoing_message);
+    if (request.method === "GET") {
+      var outgoing_message = JSON.stringify(messages);
+      response.end(outgoing_message);
+    } else if (request.method === "POST") {
+      console.log('request body ', request);
+      request.addListener("data", function(data) {
+        messages.push(JSON.parse(data));
+        console.log(data);
+      });
+      response.writeHead(200, headers);
+      response.end("Success");
+    } else {
+      response.writeHead(406, headers);
+      response.end("Please submit only GET or POST requests");
+    }
+  } else {
+    response.writeHead(404, headers);
+    response.end("There was an error");
   }
   };
 
 
 exports.handler = handleRequest;
+
 
 
 

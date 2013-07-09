@@ -35,11 +35,12 @@ function send (username, message) {
   };
 
   $.ajax({
-    type: "POST",
+    Origin: "Tuhin's Computer, duh",
+    Method: "POST",
     url: "http://127.0.0.1:8080/1/classes/messages",
     data: JSON.stringify(sendMessage), // Actual data, needs to be a JSON STRING!
     // dataType: "json", // What we're expecting
-    contentType: "application/json", // What we're sending
+    contentType: "text/plain", // What we're sending
     success: function(data) {
     }
   });
