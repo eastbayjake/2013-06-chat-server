@@ -12,7 +12,7 @@ var handleRequest = function(request, response) {
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/plain";
   response.writeHead(statusCode, headers);
-  if (request.url === "http://127.0.0.1:8080/classes/room1") {
+  if (request.url === "/classes/room1") {
     //we need to figure out how to wildcard the url
     //slash figure out the logic such that requests go to the right place
     if (request.method === "GET") {
@@ -38,7 +38,7 @@ var handleRequest = function(request, response) {
   };
 
 
-exports.handleRequest = handleRequest;
+exports.handler = handleRequest;
 
 
 

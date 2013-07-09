@@ -15,7 +15,7 @@ function display (username, userchat, timestamp) {
 function fetch () {
   $.ajax({
     type: "GET",
-    url: "http://127.0.0.1:8080/1/classes/messages",
+    url: "http://127.0.0.1:8080/classes/room1",
     data: {},
     success: function(data) {
       console.log(typeof data[0]);
@@ -37,7 +37,7 @@ function send (username, message) {
   $.ajax({
     Origin: "Tuhin's Computer, duh",
     Method: "POST",
-    url: "http://127.0.0.1:8080/1/classes/messages",
+    url: "http://127.0.0.1:8080/classes/room1",
     data: JSON.stringify(sendMessage), // Actual data, needs to be a JSON STRING!
     // dataType: "json", // What we're expecting
     contentType: "text/plain", // What we're sending
