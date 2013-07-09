@@ -1,0 +1,327 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/boxen/nodenv/versions/v0.8/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/v0.8/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jasmine-node' ]
+2 info using npm@1.1.59
+3 info using node@v0.8.8
+4 verbose node symlink /opt/boxen/nodenv/versions/v0.8/bin/node
+5 verbose read json /opt/boxen/nodenv/versions/v0.8/lib/package.json
+6 verbose read json /opt/boxen/nodenv/versions/v0.8/lib/package.json
+7 verbose cache add [ 'jasmine-node', null ]
+8 silly cache add name=undefined spec="jasmine-node" args=["jasmine-node",null]
+9 verbose parsed url { pathname: 'jasmine-node',
+9 verbose parsed url   path: 'jasmine-node',
+9 verbose parsed url   href: 'jasmine-node' }
+10 silly lockFile bba04ce4-jasmine-node jasmine-node
+11 verbose lock jasmine-node /Users/hackreactor/.npm/bba04ce4-jasmine-node.lock
+12 silly lockFile bba04ce4-jasmine-node jasmine-node
+13 verbose addNamed [ 'jasmine-node', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile b74de4f8-jasmine-node jasmine-node@
+16 verbose lock jasmine-node@ /Users/hackreactor/.npm/b74de4f8-jasmine-node.lock
+17 silly addNameRange { name: 'jasmine-node', range: '', hasData: false }
+18 verbose url raw jasmine-node
+19 verbose url resolving [ 'https://registry.npmjs.org/', './jasmine-node' ]
+20 verbose url resolved https://registry.npmjs.org/jasmine-node
+21 info retry registry request attempt 1 at 17:02:29
+22 verbose etag "8G24JG8NYFE74UZN9IQSVXG0R"
+23 http GET https://registry.npmjs.org/jasmine-node
+24 http 200 https://registry.npmjs.org/jasmine-node
+25 silly registry.get cb [ 200,
+25 silly registry.get   { vary: 'Accept',
+25 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+25 silly registry.get     etag: '"2RXOD6WSBARIGM74UTRSRCLGP"',
+25 silly registry.get     date: 'Tue, 09 Jul 2013 00:02:26 GMT',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'content-length': '216152' } ]
+26 silly addNameRange number 2 { name: 'jasmine-node', range: '', hasData: true }
+27 silly addNameRange versions [ 'jasmine-node',
+27 silly addNameRange   [ '1.0.0rc1',
+27 silly addNameRange     '1.0.0rc2',
+27 silly addNameRange     '1.0.0rc3',
+27 silly addNameRange     '1.0.1',
+27 silly addNameRange     '1.0.2',
+27 silly addNameRange     '1.0.3',
+27 silly addNameRange     '1.0.4',
+27 silly addNameRange     '1.0.5',
+27 silly addNameRange     '1.0.6',
+27 silly addNameRange     '1.0.7',
+27 silly addNameRange     '1.0.8',
+27 silly addNameRange     '1.0.9',
+27 silly addNameRange     '1.0.10',
+27 silly addNameRange     '1.0.11',
+27 silly addNameRange     '1.0.12',
+27 silly addNameRange     '1.0.13',
+27 silly addNameRange     '1.0.15',
+27 silly addNameRange     '1.0.16',
+27 silly addNameRange     '1.0.17',
+27 silly addNameRange     '1.0.18',
+27 silly addNameRange     '1.0.19',
+27 silly addNameRange     '1.0.20',
+27 silly addNameRange     '1.0.21',
+27 silly addNameRange     '1.0.22',
+27 silly addNameRange     '1.0.23',
+27 silly addNameRange     '1.0.24',
+27 silly addNameRange     '1.0.25',
+27 silly addNameRange     '1.0.26',
+27 silly addNameRange     '1.0.27',
+27 silly addNameRange     '1.0.28',
+27 silly addNameRange     '1.1.0',
+27 silly addNameRange     '1.2.0',
+27 silly addNameRange     '1.2.1',
+27 silly addNameRange     '1.2.2',
+27 silly addNameRange     '1.2.3',
+27 silly addNameRange     '1.3.0',
+27 silly addNameRange     '1.3.1',
+27 silly addNameRange     '1.4.0',
+27 silly addNameRange     '1.5.0',
+27 silly addNameRange     '1.6.0',
+27 silly addNameRange     '1.7.0',
+27 silly addNameRange     '1.7.1',
+27 silly addNameRange     '1.8.0',
+27 silly addNameRange     '1.8.1',
+27 silly addNameRange     '1.9.0',
+27 silly addNameRange     '1.9.1',
+27 silly addNameRange     '1.10.0',
+27 silly addNameRange     '1.10.1',
+27 silly addNameRange     '1.10.2' ] ]
+28 verbose addNamed [ 'jasmine-node', '1.10.2' ]
+29 verbose addNamed [ '1.10.2', '1.10.2' ]
+30 silly lockFile 80b3d569-jasmine-node-1-10-2 jasmine-node@1.10.2
+31 verbose lock jasmine-node@1.10.2 /Users/hackreactor/.npm/80b3d569-jasmine-node-1-10-2.lock
+32 silly lockFile 38d85891-ine-node-jasmine-node-1-10-2-tgz https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz
+33 verbose lock https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz /Users/hackreactor/.npm/38d85891-ine-node-jasmine-node-1-10-2-tgz.lock
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz',
+34 verbose addRemoteTarball   '4829c4226f827d5a55734154cbf39629a69be80f' ]
+35 info retry fetch attempt 1 at 17:02:30
+36 verbose fetch to= /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/tmp.tgz
+37 http GET https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz
+38 http 200 https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz
+39 silly shasum updated bytes 39078
+40 info shasum 4829c4226f827d5a55734154cbf39629a69be80f
+40 info shasum /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/tmp.tgz
+41 verbose tar unpack /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/tmp.tgz
+42 silly lockFile ac1ee46b-50544-0-6259911293163896-package /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package
+43 verbose lock /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package /Users/hackreactor/.npm/ac1ee46b-50544-0-6259911293163896-package.lock
+44 silly gunzTarPerm modes [ '777', '666' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm modified mode [ 'package.json', 493, 511 ]
+47 silly gunzTarPerm extractEntry .npmignore
+48 silly gunzTarPerm modified mode [ '.npmignore', 493, 511 ]
+49 silly gunzTarPerm extractEntry README.md
+50 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+51 silly gunzTarPerm extractEntry LICENSE
+52 silly gunzTarPerm modified mode [ 'LICENSE', 493, 511 ]
+53 silly gunzTarPerm extractEntry bin/jasmine-node
+54 silly gunzTarPerm modified mode [ 'bin/jasmine-node', 493, 511 ]
+55 silly gunzTarPerm extractEntry lib/jasmine-node/async-callback.js
+56 silly gunzTarPerm modified mode [ 'lib/jasmine-node/async-callback.js', 420, 438 ]
+57 silly gunzTarPerm extractEntry lib/jasmine-node/cli.js
+58 silly gunzTarPerm modified mode [ 'lib/jasmine-node/cli.js', 493, 511 ]
+59 silly gunzTarPerm extractEntry lib/jasmine-node/cs.js
+60 silly gunzTarPerm modified mode [ 'lib/jasmine-node/cs.js', 420, 438 ]
+61 silly gunzTarPerm extractEntry lib/jasmine-node/index.js
+62 silly gunzTarPerm modified mode [ 'lib/jasmine-node/index.js', 493, 511 ]
+63 silly gunzTarPerm extractEntry lib/jasmine-node/autotest.js
+64 silly gunzTarPerm modified mode [ 'lib/jasmine-node/autotest.js', 420, 438 ]
+65 silly gunzTarPerm extractEntry lib/jasmine-node/reporter.js
+66 silly gunzTarPerm modified mode [ 'lib/jasmine-node/reporter.js', 493, 511 ]
+67 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-runner.js
+68 silly gunzTarPerm modified mode [ 'lib/jasmine-node/requirejs-runner.js', 420, 438 ]
+69 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-spec-loader.js
+70 silly gunzTarPerm modified mode [ 'lib/jasmine-node/requirejs-spec-loader.js', 420, 438 ]
+71 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-wrapper-template.js
+72 silly gunzTarPerm modified mode [ 'lib/jasmine-node/requirejs-wrapper-template.js', 420, 438 ]
+73 silly gunzTarPerm extractEntry lib/jasmine-node/spec-collection.js
+74 silly gunzTarPerm modified mode [ 'lib/jasmine-node/spec-collection.js', 420, 438 ]
+75 silly gunzTarPerm extractEntry lib/jasmine-node/jasmine-1.3.1.js
+76 silly gunzTarPerm modified mode [ 'lib/jasmine-node/jasmine-1.3.1.js', 420, 438 ]
+77 silly gunzTarPerm extractEntry .travis.yml
+78 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+79 silly gunzTarPerm extractEntry scripts/specs
+80 silly gunzTarPerm modified mode [ 'scripts/specs', 493, 511 ]
+81 silly gunzTarPerm extractEntry spec/sample_helper.js
+82 silly gunzTarPerm modified mode [ 'spec/sample_helper.js', 420, 438 ]
+83 silly gunzTarPerm extractEntry spec/reporter_spec.js
+84 silly gunzTarPerm modified mode [ 'spec/reporter_spec.js', 420, 438 ]
+85 silly gunzTarPerm extractEntry spec/nested.js/NestedSpec.js
+86 silly gunzTarPerm modified mode [ 'spec/nested.js/NestedSpec.js', 420, 438 ]
+87 silly gunzTarPerm extractEntry spec/SampleSpecs.js
+88 silly gunzTarPerm modified mode [ 'spec/SampleSpecs.js', 493, 511 ]
+89 silly gunzTarPerm extractEntry spec/TestSpec.js
+90 silly gunzTarPerm modified mode [ 'spec/TestSpec.js', 493, 511 ]
+91 silly gunzTarPerm extractEntry spec/TimerSpec.js
+92 silly gunzTarPerm modified mode [ 'spec/TimerSpec.js', 420, 438 ]
+93 silly gunzTarPerm extractEntry spec/helper_spec.js
+94 silly gunzTarPerm modified mode [ 'spec/helper_spec.js', 420, 438 ]
+95 silly gunzTarPerm extractEntry spec/async-callback_spec.js
+96 silly gunzTarPerm modified mode [ 'spec/async-callback_spec.js', 420, 438 ]
+97 silly gunzTarPerm extractEntry spec/CoffeeSpec.coffee
+98 silly gunzTarPerm modified mode [ 'spec/CoffeeSpec.coffee', 493, 511 ]
+99 silly gunzTarPerm extractEntry spec/litcoffee/Litcoffee.spec.litcoffee
+100 silly gunzTarPerm modified mode [ 'spec/litcoffee/Litcoffee.spec.litcoffee', 420, 438 ]
+101 silly gunzTarPerm extractEntry spec/nested/NestedSpec.js
+102 silly gunzTarPerm modified mode [ 'spec/nested/NestedSpec.js', 493, 511 ]
+103 silly gunzTarPerm extractEntry spec/nested/uber-nested/UberNestedSpec.js
+104 silly gunzTarPerm modified mode [ 'spec/nested/uber-nested/UberNestedSpec.js', 493, 511 ]
+105 silly gunzTarPerm extractEntry spec/HelperSpec.coffee
+106 silly gunzTarPerm modified mode [ 'spec/HelperSpec.coffee', 420, 438 ]
+107 silly gunzTarPerm extractEntry spec/GrammarHelper.coffee
+108 silly gunzTarPerm modified mode [ 'spec/GrammarHelper.coffee', 420, 438 ]
+109 silly gunzTarPerm extractEntry spec/AsyncSpec.coffee
+110 silly gunzTarPerm modified mode [ 'spec/AsyncSpec.coffee', 420, 438 ]
+111 silly gunzTarPerm extractEntry spec-requirejs/requirejs-setup.js
+112 silly gunzTarPerm modified mode [ 'spec-requirejs/requirejs-setup.js', 420, 438 ]
+113 silly gunzTarPerm extractEntry spec-requirejs/requirejs-wrapper-template.js
+114 silly gunzTarPerm modified mode [ 'spec-requirejs/requirejs-wrapper-template.js', 420, 438 ]
+115 silly gunzTarPerm extractEntry spec-requirejs/requirejs.spec.js
+116 silly gunzTarPerm modified mode [ 'spec-requirejs/requirejs.spec.js', 420, 438 ]
+117 silly gunzTarPerm extractEntry spec-requirejs/requirejs.sut.js
+118 silly gunzTarPerm modified mode [ 'spec-requirejs/requirejs.sut.js', 420, 438 ]
+119 silly gunzTarPerm extractEntry spec-requirejs-coffee/requirejs-setup.js
+120 silly gunzTarPerm modified mode [ 'spec-requirejs-coffee/requirejs-setup.js', 420, 438 ]
+121 silly gunzTarPerm extractEntry spec-requirejs-coffee/RequireCsSpec.coffee
+122 silly gunzTarPerm modified mode [ 'spec-requirejs-coffee/RequireCsSpec.coffee', 420, 438 ]
+123 silly gunzTarPerm extractEntry spec-requirejs-coffee/RequireJsSpec.coffee
+124 silly gunzTarPerm modified mode [ 'spec-requirejs-coffee/RequireJsSpec.coffee', 420, 438 ]
+125 silly gunzTarPerm extractEntry spec-requirejs-coffee/requirecs.sut.coffee
+126 silly gunzTarPerm modified mode [ 'spec-requirejs-coffee/requirecs.sut.coffee', 420, 438 ]
+127 silly gunzTarPerm extractEntry specs.sh
+128 silly gunzTarPerm modified mode [ 'specs.sh', 493, 511 ]
+129 verbose read json /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package/package.json
+130 silly lockFile ac1ee46b-50544-0-6259911293163896-package /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package
+131 verbose from cache /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package/package.json
+132 verbose tar pack [ '/Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz',
+132 verbose tar pack   '/var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package' ]
+133 verbose tarball /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz
+134 verbose folder /var/folders/8y/f5pq_rys7s715v7m5p19jdq40000gn/T/npm-54641/1373328150544-0.6259911293163896/package
+135 silly lockFile c47d898c--jasmine-node-1-10-2-package-tgz /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz
+136 verbose lock /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz /Users/hackreactor/.npm/c47d898c--jasmine-node-1-10-2-package-tgz.lock
+137 silly lockFile c47d898c--jasmine-node-1-10-2-package-tgz /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz
+138 silly lockFile c13064ac--npm-jasmine-node-1-10-2-package /Users/hackreactor/.npm/jasmine-node/1.10.2/package
+139 verbose lock /Users/hackreactor/.npm/jasmine-node/1.10.2/package /Users/hackreactor/.npm/c13064ac--npm-jasmine-node-1-10-2-package.lock
+140 silly lockFile c13064ac--npm-jasmine-node-1-10-2-package /Users/hackreactor/.npm/jasmine-node/1.10.2/package
+141 verbose tar unpack /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz
+142 silly lockFile c13064ac--npm-jasmine-node-1-10-2-package /Users/hackreactor/.npm/jasmine-node/1.10.2/package
+143 verbose lock /Users/hackreactor/.npm/jasmine-node/1.10.2/package /Users/hackreactor/.npm/c13064ac--npm-jasmine-node-1-10-2-package.lock
+144 silly gunzTarPerm modes [ '777', '666' ]
+145 silly gunzTarPerm extractEntry package.json
+146 silly gunzTarPerm extractEntry .npmignore
+147 silly gunzTarPerm extractEntry README.md
+148 silly gunzTarPerm extractEntry LICENSE
+149 silly gunzTarPerm extractEntry lib/jasmine-node/async-callback.js
+150 silly gunzTarPerm extractEntry lib/jasmine-node/cli.js
+151 silly gunzTarPerm extractEntry lib/jasmine-node/cs.js
+152 silly gunzTarPerm extractEntry lib/jasmine-node/index.js
+153 silly gunzTarPerm extractEntry lib/jasmine-node/autotest.js
+154 silly gunzTarPerm extractEntry lib/jasmine-node/reporter.js
+155 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-runner.js
+156 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-spec-loader.js
+157 silly gunzTarPerm extractEntry lib/jasmine-node/requirejs-wrapper-template.js
+158 silly gunzTarPerm extractEntry lib/jasmine-node/spec-collection.js
+159 silly gunzTarPerm extractEntry lib/jasmine-node/jasmine-1.3.1.js
+160 silly gunzTarPerm extractEntry bin/jasmine-node
+161 silly gunzTarPerm extractEntry .travis.yml
+162 silly gunzTarPerm extractEntry scripts/specs
+163 silly gunzTarPerm extractEntry spec/async-callback_spec.js
+164 silly gunzTarPerm extractEntry spec/TestSpec.js
+165 silly gunzTarPerm extractEntry spec/SampleSpecs.js
+166 silly gunzTarPerm extractEntry spec/helper_spec.js
+167 silly gunzTarPerm extractEntry spec/sample_helper.js
+168 silly gunzTarPerm extractEntry spec/reporter_spec.js
+169 silly gunzTarPerm extractEntry spec/nested.js/NestedSpec.js
+170 silly gunzTarPerm extractEntry spec/TimerSpec.js
+171 silly gunzTarPerm extractEntry spec/AsyncSpec.coffee
+172 silly gunzTarPerm extractEntry spec/litcoffee/Litcoffee.spec.litcoffee
+173 silly gunzTarPerm extractEntry spec/HelperSpec.coffee
+174 silly gunzTarPerm extractEntry spec/GrammarHelper.coffee
+175 silly gunzTarPerm extractEntry spec/CoffeeSpec.coffee
+176 silly gunzTarPerm extractEntry spec/nested/NestedSpec.js
+177 silly gunzTarPerm extractEntry spec/nested/uber-nested/UberNestedSpec.js
+178 silly gunzTarPerm extractEntry spec-requirejs/requirejs-setup.js
+179 silly gunzTarPerm extractEntry spec-requirejs/requirejs-wrapper-template.js
+180 silly gunzTarPerm extractEntry spec-requirejs/requirejs.spec.js
+181 silly gunzTarPerm extractEntry spec-requirejs/requirejs.sut.js
+182 silly gunzTarPerm extractEntry spec-requirejs-coffee/requirejs-setup.js
+183 silly gunzTarPerm extractEntry spec-requirejs-coffee/requirecs.sut.coffee
+184 silly gunzTarPerm extractEntry spec-requirejs-coffee/RequireCsSpec.coffee
+185 silly gunzTarPerm extractEntry spec-requirejs-coffee/RequireJsSpec.coffee
+186 silly gunzTarPerm extractEntry specs.sh
+187 verbose read json /Users/hackreactor/.npm/jasmine-node/1.10.2/package/package.json
+188 silly lockFile c13064ac--npm-jasmine-node-1-10-2-package /Users/hackreactor/.npm/jasmine-node/1.10.2/package
+189 silly shasum updated bytes 39070
+190 info shasum deb3384aa5e7cf80359a55f82e169a81030e2806
+190 info shasum /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz
+191 verbose from cache /Users/hackreactor/.npm/jasmine-node/1.10.2/package/package.json
+192 verbose chmod /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz 666
+193 verbose chown /Users/hackreactor/.npm/jasmine-node/1.10.2/package.tgz [ 501, 20 ]
+194 silly lockFile 38d85891-ine-node-jasmine-node-1-10-2-tgz https://registry.npmjs.org/jasmine-node/-/jasmine-node-1.10.2.tgz
+195 silly lockFile 80b3d569-jasmine-node-1-10-2 jasmine-node@1.10.2
+196 silly lockFile b74de4f8-jasmine-node jasmine-node@
+197 silly resolved [ { name: 'jasmine-node',
+197 silly resolved     version: '1.10.2',
+197 silly resolved     description: 'DOM-less simple JavaScript BDD testing framework for Node',
+197 silly resolved     contributors: [ [Object] ],
+197 silly resolved     homepage: 'https://github.com/mhevery/jasmine-node',
+197 silly resolved     repository:
+197 silly resolved      { type: 'git',
+197 silly resolved        url: 'https://github.com/mhevery/jasmine-node.git' },
+197 silly resolved     keywords: [ 'testing', 'bdd' ],
+197 silly resolved     author: { name: 'Misko Hevery', email: 'misko@hevery.com' },
+197 silly resolved     maintainers: [ [Object], [Object] ],
+197 silly resolved     licenses: [ 'MIT' ],
+197 silly resolved     dependencies:
+197 silly resolved      { 'coffee-script': '>=1.0.1',
+197 silly resolved        'jasmine-reporters': '>=0.2.0',
+197 silly resolved        requirejs: '>=0.27.1',
+197 silly resolved        walkdir: '>= 0.0.1',
+197 silly resolved        underscore: '>= 1.3.1',
+197 silly resolved        gaze: '~0.3.2',
+197 silly resolved        mkdirp: '~0.3.5' },
+197 silly resolved     bin: { 'jasmine-node': 'bin/jasmine-node' },
+197 silly resolved     preferGlobal: true,
+197 silly resolved     main: 'lib/jasmine-node',
+197 silly resolved     scripts: { test: 'node lib/jasmine-node/cli.js spec' },
+197 silly resolved     devDependencies: {},
+197 silly resolved     readme: 'jasmine-node\n======\n\n[![Build Status](https://secure.travis-ci.org/spaghetticode/jasmine-node.png)](http://travis-ci.org/spaghetticode/jasmine-node)\n\nThis node.js module makes the wonderful Pivotal Lab\'s jasmine\n(http://github.com/pivotal/jasmine) spec framework available in\nnode.js.\n\njasmine\n-------\n\nVersion 1.3.1 of Jasmine is currently included with node-jasmine.\n\nwhat\'s new\n----------\n*  Ability to test specs written in Literate Coffee-Script\n*  Teamcity Reporter reinstated.\n*  Ability to specify multiple files to test via list in command line\n*  Ability to suppress stack trace with <code>--noStack</code>\n*  Async tests now run in the expected context instead of the global one\n*  --config flag that allows you to assign variables to process.env\n*  Terminal Reporters are now available in the Jasmine Object #184\n*  Done is now available in all timeout specs #199\n*  <code>afterEach</code> is available in requirejs #179\n*  Editors that replace instead of changing files should work with autotest #198\n*  Jasmine Mock Clock now works!\n*  Autotest now works!\n*  Using the latest Jasmine!\n*  Verbose mode tabs <code>describe</code> blocks much more accurately!\n*  --coffee now allows specs written in Literate CoffeeScript (.litcoffee)\n\ninstall\n------\n\nTo install the latest official version, use NPM:\n\n    npm install jasmine-node -g\n\nTo install the latest _bleeding edge_ version, clone this repository and check\nout the `beta` branch.\n\nusage\n------\n\nWrite the specifications for your code in \\*.js and \\*.coffee files in the\nspec/ directory (note: your specification files must end with either\n.spec.js, .spec.coffee or .spec.litcoffee; otherwise jasmine-node won\'t find them!). You can use sub-directories to better organise your specs.\n\nIf you have installed the npm package, you can run it with:\n\n    jasmine-node spec/\n\nIf you aren\'t using npm, you should add `pwd`/lib to the $NODE_PATH\nenvironment variable, then run:\n\n    node lib/jasmine-node/cli.js\n\n\nYou can supply the following arguments:\n\n  * <code>--autotest</code>, provides automatic execution of specs after each change\n  * <code>--watch</code>, when used with <code>--autotest</code>, paths after <code>--watch</code> will be \nwatched for changes, allowing to watch for changes outside of specs directory\n  * <code>--coffee</code>, allow execution of .coffee and .litcoffee specs\n  * <code>--color</code>, indicates spec output should uses color to\nindicates passing (green) or failing (red) specs\n  * <code>--noColor</code>, do not use color in the output\n  * <code>-m, --match REGEXP</code>, match only specs comtaining "REGEXPspec"\n  * <code>--matchall</code>, relax requirement of "spec" in spec file names\n  * <code>--verbose</code>, verbose output as the specs are run\n  * <code>--junitreport</code>, export tests results as junitreport xml format\n  * <code>--output FOLDER</code>, defines the output folder for junitreport files\n  * <code>--teamcity</code>, converts all console output to teamcity custom test runner commands. (Normally auto detected.)\n  * <code>--runWithRequireJs</code>, loads all specs using requirejs instead of node\'s native require method\n  * <code>--requireJsSetup</code>, file run before specs to include and configure RequireJS\n  * <code>--test-dir</code>, the absolute root directory path where tests are located\n  * <code>--nohelpers</code>, does not load helpers\n  * <code>--forceexit</code>, force exit once tests complete\n  * <code>--captureExceptions</code>, listen to global exceptions, report them and exit (interferes with Domains in NodeJs, so do not use if using Domains as well\n  * <code>--config NAME VALUE</code>, set a global variable in process.env\n  * <code>--noStack</code>, suppress the stack trace generated from a test failure\n\nIndividual files to test can be added as bare arguments to the end of the args.\n\nExample:\n\n`jasmine-node --coffee spec/AsyncSpec.coffee spec/CoffeeSpec.coffee spec/SampleSpecs.js`\n\nasync tests\n-----------\n\njasmine-node includes an alternate syntax for writing asynchronous tests. Accepting\na done callback in the specification will trigger jasmine-node to run the test\nasynchronously waiting until the done() callback is called.\n\n```javascript\n    var request = require(\'request\');\n\n    it("should respond with hello world", function(done) {\n      request("http://localhost:3000/hello", function(error, response, body){\n        expect(body).toEqual("hello world");\n        done();\n      });\n    });\n```\n\nAn asynchronous test will fail after 5000 ms if done() is not called. This timeout\ncan be changed by setting `jasmine.getEnv().defaultTimeoutInterval` or by passing a timeout\ninterval in the specification.\n\n```javascript\n    var request = require(\'request\');\n\n    it("should respond with hello world", function(done) {\n      request("http://localhost:3000/hello", function(error, response, body){\n        done();\n      }, 250);  // timeout after 250 ms\n    });\n```\n\nor\n\n```javascript\n    var request = require(\'request\');\n\n    jasmine.getEnv().defaultTimeoutInterval = 500;\n    \n    it("should respond with hello world", function(done) {\n      request("http://localhost:3000/hello", function(error, response, body){\n        done();\n      });  // timeout after 500 ms\n    });\n```\n\nCheckout spec/SampleSpecs.js to see how to use it.\n\n\nrequirejs\n---------\n\nThere is a sample project in `/spec-requirejs`. It is comprised of:\n\n1.  `requirejs-setup.js`, this pulls in our wrapper template (next)\n1.  `requirejs-wrapper-template`, this builds up requirejs settings\n1.  `requirejs.sut.js`, this is a __SU__bject To __T__est, something required by requirejs\n1.  `requirejs.spec.js`, the actual jasmine spec for testing\n\nTo run it:\n\n    node lib/jasmine-node/cli.js --runWithRequireJs --requireJsSetup ./spec-requirejs/requirejs-setup.js ./spec-requirejs/\n\nexceptions\n----------\n\nOften you\'ll want to capture an uncaught exception and log it to the console,\nthis is accomplished by using the `--captureExceptions` flag. Exceptions will\nbe reported to the console, but jasmine-node will attempt to recover and\ncontinue. It was decided to not change the current functionality until 2.0. So,\nuntil then, jasmine-node will still return 0 and continue on without this flag.\n\n### Scenario ###\n\nYou require a module, but it doesn\'t exist, ie `require(\'Q\')` instead of\n`require(\'q\')`. Jasmine-Node reports the error to the console, but carries on\nand returns 0. This messes up Travis-CI because you need it to return a\nnon-zero status while doing CI tests.\n\n### Mitigation ###\n\nBefore `--captureExceptions`\n\n```sh\n> jasmine-node --coffee spec\n> echo $status\n0\n```\n\nRun jasmine node with the `--captureExceptions` flag.\n\n```sh\n> jasmine-node --coffee --captureExceptions spec\n> echo $status\n1\n```\n\n\ndevelopment\n-----------\n\nInstall the dependent packages by running:\n\n    npm install\n\nRun the specs before you send your pull request:\n\n    specs.sh\n\n__Note:__ Some tests are designed to fail in the specs.sh. After each of the\nindividual runs completes, there is a line that lists what the expected\nPass/Assert/Fail count should be. If you add/remove/edit tests, please be sure\nto update this with your PR.\n\n\nchangelog\n---------\n\n*  _1.10.2 - Restored stack filter which was accidentally removed (thanks to\n   [kevinsawicki](https://github.com/kevinsawicki))_\n*  _1.10.1 - `beforeEach` and `afterEach` now properly handle the async-timeout function_\n*  _1.10.0 - Skipped tests now show in the terminal reporter\'s output (thanks\n   to [kevinsawicki](https://github.com/kevinsawicki))_\n*  _1.9.1 - Timeout now consistent between Async and Non-Async Calls (thanks to\n   [codemnky](https://github.com/codemnky))_\n*  _1.9.0 - Now re-throwing the file-not-found error, added info to README.md,\n   printing version with `--version`_\n*  _1.8.1 - Fixed silent failure due to invalid REGEX (thanks to\n   [pimterry](https://github.com/pimterry))_\n*  _1.8.0 - Fixed bug in autotest with multiple paths and added --watch feature\n    (thanks to [davegb3](https://github.com/davegb3))_\n*  _1.7.1 - Removed unneeded fs dependency (thanks to\n   [kevinsawicki](https://github.com/kevinsawicki)) Fixed broken fs call in\n   node 0.6 (thanks to [abe33](https://github.com/abe33))_\n*  _1.7.0 - Literate Coffee-Script now testable (thanks to [magicmoose](https://github.com/magicmoose))_\n*  _1.6.0 - Teamcity Reporter Reinstated (thanks to [bhcleek](https://github.com/bhcleek))_\n*  _1.5.1 - Missing files and require exceptions will now report instead of failing silently_\n*  _1.5.0 - Now takes multiple files for execution. (thanks to [abe33](https://github.com/abe33))_\n*  _1.4.0 - Optional flag to suppress stack trace on test failure (thanks to [Lastalas](https://github.com/Lastalas))_\n*  _1.3.1 - Fixed context for async tests (thanks to [omryn](https://github.com/omryn))_\n*  _1.3.0 - Added --config flag for changeable testing environments_\n*  _1.2.3 - Fixed #179, #184, #198, #199. Fixes autotest, afterEach in requirejs, terminal reporter is in jasmine object, done function missing in async tests_\n*  _1.2.2 - Revert Exception Capturing to avoid Breaking Domain Tests_\n*  _1.2.1 - Emergency fix for path reference missing_\n*  _1.2.0 - Fixed #149, #152, #171, #181, #195. --autotest now works as expected, jasmine clock now responds to the fake ticking as requested, and removed the path.exists warning_\n*  _1.1.1 - Fixed #173, #169 (Blocks were not indented in verbose properly, added more documentation to address #180_\n*  _1.1.0 - Updated Jasmine to 1.3.1, fixed fs missing, catching uncaught exceptions, other fixes_\n',
+197 silly resolved     _id: 'jasmine-node@1.10.2',
+197 silly resolved     dist: { shasum: 'deb3384aa5e7cf80359a55f82e169a81030e2806' },
+197 silly resolved     _from: 'jasmine-node' } ]
+198 info install jasmine-node@1.10.2 into /opt/boxen/nodenv/versions/v0.8/lib
+199 info installOne jasmine-node@1.10.2
+200 verbose from cache /Users/hackreactor/.npm/jasmine-node/1.10.2/package/package.json
+201 info /opt/boxen/nodenv/versions/v0.8/lib/node_modules/jasmine-node unbuild
+202 verbose read json /opt/boxen/nodenv/versions/v0.8/lib/node_modules/jasmine-node/package.json
+203 info preuninstall jasmine-node@1.7.1
+204 info uninstall jasmine-node@1.7.1
+205 verbose true,/opt/boxen/nodenv/versions/v0.8/lib/node_modules,/opt/boxen/nodenv/versions/v0.8/lib/node_modules unbuild jasmine-node@1.7.1
+206 verbose /opt/boxen/nodenv/versions/v0.8/bin,[object Object] binRoot
+207 info /opt/boxen/nodenv/versions/v0.8/lib/node_modules/jasmine-node unbuild
+208 verbose read json /opt/boxen/nodenv/versions/v0.8/lib/node_modules/jasmine-node/package.json
+209 info preuninstall jasmine-node@1.7.1
+210 info uninstall jasmine-node@1.7.1
+211 verbose true,/opt/boxen/nodenv/versions/v0.8/lib/node_modules,/opt/boxen/nodenv/versions/v0.8/lib/node_modules unbuild jasmine-node@1.7.1
+212 verbose /opt/boxen/nodenv/versions/v0.8/bin,[object Object] binRoot
+213 error error rolling back Error: EPERM, chmod '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node'
+213 error error rolling back  jasmine-node@1.10.2 { [Error: EPERM, chmod '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node']
+213 error error rolling back   errno: 50,
+213 error error rolling back   code: 'EPERM',
+213 error error rolling back   path: '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node' }
+214 error Error: EPERM, chmod '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node'
+214 error  { [Error: EPERM, chmod '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node']
+214 error   errno: 50,
+214 error   code: 'EPERM',
+214 error   path: '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node' }
+215 error Please try running this command again as root/Administrator.
+216 error System Darwin 12.3.0
+217 error command "/opt/boxen/nodenv/versions/v0.8/bin/node" "/opt/boxen/nodenv/versions/v0.8/bin/npm" "install" "-g" "jasmine-node"
+218 error cwd /Users/hackreactor/code/eastbayjake/2013-06-chat-server
+219 error node -v v0.8.8
+220 error npm -v 1.1.59
+221 error path /opt/boxen/nodenv/versions/v0.8/bin/jasmine-node
+222 error code EPERM
+223 error errno 50
+224 error stack Error: EPERM, chmod '/opt/boxen/nodenv/versions/v0.8/bin/jasmine-node'
+225 verbose exit [ 50, true ]

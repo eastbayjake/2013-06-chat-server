@@ -12,9 +12,12 @@ var handleRequest = function(request, response) {
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/plain";
   response.writeHead(statusCode, headers);
-  if (request.url === "/1/classes/messages") {
+  if (request.url === "http://127.0.0.1:8080/classes/room1") {
+    //we need to figure out how to wildcard the url
+    //slash figure out the logic such that requests go to the right place
     if (request.method === "GET") {
       var outgoing_message = JSON.stringify(messages);
+      response.writeHead(200, headers);
       response.end(outgoing_message);
     } else if (request.method === "POST") {
       console.log('request body ', request);
@@ -22,7 +25,7 @@ var handleRequest = function(request, response) {
         messages.push(JSON.parse(data));
         console.log(data);
       });
-      response.writeHead(200, headers);
+      response.writeHead(201, headers);
       response.end("Success");
     } else {
       response.writeHead(406, headers);
@@ -35,7 +38,7 @@ var handleRequest = function(request, response) {
   };
 
 
-exports.handler = handleRequest;
+exports.handleRequest = handleRequest;
 
 
 
