@@ -18,48 +18,44 @@ var handleRequest = function(request, response) {
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/html";
   response.writeHead(statusCode, headers);
-  var shortURL = request.url;
-  console.log('our url', shortURL);
   var html, client, reset, styles;
   var messages = fs.readFileSync('./messages/archive.txt', 'utf8');
   messages = JSON.parse(messages);
 
   if (request.url === '/') {
     html = fs.readFileSync('./client/index.html');
-      response.write(html);
-      response.end();
+    response.write(html);
+    response.end();
   }
   if (request.url === '/client.js') {
     client = fs.readFileSync('./client/client.js');
-      response.write(client);
-      response.end();
+    response.write(client);
+    response.end();
   }
   if (request.url === '/css/reset.css') {
     reset = fs.readFileSync('./client/css/reset.css');
-      response.write(reset);
-      response.end();
+    response.write(reset);
+    response.end();
   }
   if (request.url === '/css/styles.css') {
     styles = fs.readFileSync('./client/css/styles.css');
-      response.write(styles);
-      response.end();
+    response.write(styles);
+    response.end();
   }
   if (request.method === "GET"){
-    console.log(messages[shortURL]);
-    if (messages[shortURL]){
+    if (messages[request.url]){
       response.writeHead(200, headers);
-      response.end(JSON.stringify(messages[shortURL]));
+      response.end(JSON.stringify(messages[request.url]));
     } else {
       response.writeHead(404, headers);
       response.end("FILE NOT FOUND");
     }
   } else if (request.method === "POST"){
-    if (!messages[shortURL]) {
-      messages[shortURL] = [];
+    if (!messages[request.url]) {
+      messages[request.url] = [];
     }
     request.addListener("data", function(data) {
-      messages[shortURL].push(JSON.parse(data));
-      console.log(messages);
+      messages[request.url].push(JSON.parse(data));
       fs.writeFileSync('./messages/archive.txt', JSON.stringify(messages));
     });
     response.writeHead(201, headers);
@@ -68,10 +64,6 @@ var handleRequest = function(request, response) {
     response.writeHead(406, headers);
     response.end("Please submit only GET or POST requests");
   }
-};
-
-var parseURL = function(url) {
-  return url.substr(21,url.length);
 };
 
 exports.handleRequest = handleRequest;
