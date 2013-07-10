@@ -56,7 +56,6 @@ $(document).ready(function(){
     username = document.getElementById('username').value;
     send(username, draftMessage);
     $('#message').val("");
-    console.log(event);
   });
 
   $('#username').click(function(){

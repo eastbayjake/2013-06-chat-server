@@ -5,11 +5,6 @@
  * node module documentation at http://nodejs.org/api/modules.html. */
 var fs = require('fs');
 
-var messages = {
-  '/classes/room1': [],
-  '/room1/': []
-};
-
 var defaultCorsHeaders = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
@@ -23,10 +18,12 @@ var handleRequest = function(request, response) {
   var headers = defaultCorsHeaders;
   headers['Content-Type'] = "text/html";
   response.writeHead(statusCode, headers);
-  console.log(request.url);
-  var shortURL = parseURL(request.url);
-  console.log(request.url);
+  var shortURL = request.url;
+  console.log('our url', shortURL);
   var html, client, reset, styles;
+  var messages = fs.readFileSync('./messages/archive.txt', 'utf8');
+  messages = JSON.parse(messages);
+
   if (request.url === '/') {
     html = fs.readFileSync('./client/index.html');
       response.write(html);
@@ -48,6 +45,7 @@ var handleRequest = function(request, response) {
       response.end();
   }
   if (request.method === "GET"){
+    console.log(messages[shortURL]);
     if (messages[shortURL]){
       response.writeHead(200, headers);
       response.end(JSON.stringify(messages[shortURL]));
@@ -61,6 +59,8 @@ var handleRequest = function(request, response) {
     }
     request.addListener("data", function(data) {
       messages[shortURL].push(JSON.parse(data));
+      console.log(messages);
+      fs.writeFileSync('./messages/archive.txt', JSON.stringify(messages));
     });
     response.writeHead(201, headers);
     response.end("Success");
